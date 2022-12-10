@@ -35,12 +35,14 @@ const myData = { username: 'example' };
 let x = 2
 const cardContainer = document.getElementById("section")
 
-
-fetch(`https://jsonplaceholder.typicode.com/posts`)
+for (let x = 0; x < 100; x++) {
+  fetch(`https://jsonplaceholder.typicode.com/posts`)
   .then((response) => response.json())
   .then((data) => cardContainer.insertAdjacentHTML("beforeend", `<div class="card">
-  <p class="card-title">${data[0].title}</p>
+  <p class="card-title">${data[x].title}</p>
   <p class="card-text">
-    ${data[0].body}
+    ${data[x].body}
   </p>
 </div>`));
+  
+}
