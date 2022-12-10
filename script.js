@@ -38,4 +38,9 @@ const cardContainer = document.getElementById("section")
 
 fetch(`https://jsonplaceholder.typicode.com/posts`)
   .then((response) => response.json())
-  .then((data) => console.log(data));
+  .then((data) => cardContainer.insertAdjacentHTML("beforeend", `<div class="card">
+  <p class="card-title">${data[0].title}</p>
+  <p class="card-text">
+    ${data[0].body}
+  </p>
+</div>`));
