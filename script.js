@@ -38,22 +38,25 @@ const innp = document.getElementById("input-card")
 const bla = document.getElementById("input-text")
 const blala = document.getElementById("input-title")
 const add_btn = document.getElementById("addbt")
+const blalala = document.getElementById("btn")
 
-for (let x = 0; x < 100; x++) {
-  fetch(`https://jsonplaceholder.typicode.com/posts`)
-  .then((response) => response.json())
-  .then((data) => cardContainer.insertAdjacentHTML("beforeend", `<div class="card">
-  <p class="card-title">${data[x].title}</p>
-  <p class="card-text">
-    ${data[x].body}
-  </p>
-</div>`));
+// for (let x = 0; x < 100; x++) {
+//   fetch(`https://jsonplaceholder.typicode.com/posts`)
+//   .then((response) => response.json())
+//   .then((data) => cardContainer.insertAdjacentHTML("beforeend", `<div class="card">
+//   <p class="card-title">${data[x].title}</p>
+//   <p class="card-text">
+//     ${data[x].body}
+//   </p>
+// </div>`));
   
-}
+// }
 
 function hide() {
   innp.classList.toggle("hide")
   add_btn.classList.toggle("hide")
+  blalala.classList.toggle("rotate")
+
 }
 bla.addEventListener("keyup", function(e) {
   if (e.which == 13) {
@@ -67,6 +70,7 @@ bla.addEventListener("keyup", function(e) {
       bla.value = ""
       innp.classList.remove("hide");
       add_btn.classList.remove("hide");
+      blalala.classList.remove("rotate")
 
       }
 
@@ -84,10 +88,7 @@ add_btn.addEventListener("click", function(e) {
       bla.value = ""
       innp.classList.remove("hide");
       add_btn.classList.remove("hide");
-
-      
-
-     
+      blalala.classList.remove("rotate")
   });
 
 

@@ -99,3 +99,6 @@ footer{
     display: flex;
     flex-direction: row;
 }
+.rotate{
+    transform: rotate(45deg);
+}
