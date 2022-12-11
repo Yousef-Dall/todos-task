@@ -34,6 +34,10 @@ const myData = { username: 'example' };
 //   });
 let x = 2
 const cardContainer = document.getElementById("section")
+const innp = document.getElementById("input-card")
+const bla = document.getElementById("input-text")
+const blala = document.getElementById("input-title")
+const add_btn = document.getElementById("addbt")
 
 for (let x = 0; x < 100; x++) {
   fetch(`https://jsonplaceholder.typicode.com/posts`)
@@ -46,3 +50,47 @@ for (let x = 0; x < 100; x++) {
 </div>`));
   
 }
+
+function hide() {
+  innp.classList.toggle("hide")
+  add_btn.classList.toggle("hide")
+}
+bla.addEventListener("keyup", function(e) {
+  if (e.which == 13) {
+    cardContainer.insertAdjacentHTML("beforeend", `<div class="card">
+    <p class="card-title">${blala.value}</p>   <p class="card-text">
+    ${bla.value}
+    </p>
+ </div>`)
+      console.log(bla.value);
+      blala.value = ""
+      bla.value = ""
+      innp.classList.remove("hide");
+      add_btn.classList.remove("hide");
+
+      }
+
+     
+  });
+add_btn.addEventListener("click", function(e) {
+  
+    cardContainer.insertAdjacentHTML("beforeend", `<div class="card">
+    <p class="card-title">${blala.value}</p>   <p class="card-text">
+    ${bla.value}
+    </p>
+ </div>`)
+      console.log(bla.value);
+      blala.value = ""
+      bla.value = ""
+      innp.classList.remove("hide");
+      add_btn.classList.remove("hide");
+
+      
+
+     
+  });
+
+
+
+  
+

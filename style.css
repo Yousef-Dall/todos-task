@@ -8,11 +8,11 @@
     font-family: 'Roboto';
     font-weight: 900;
     font-size: 72px;
-    position: sticky;
+    /* position: sticky; */
     top: 0px;
     width: 100%;
     z-index: 100;
-    background-color: #FFFFFF;
+    /* background-color: #FFFFFF; */
     display: flex;
     justify-content: center;
     height: 15vh;
@@ -28,9 +28,11 @@ h1{
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    background-color: #F9FAFB;
 }
+body{
+    background-color: #F9FAFB;
 
+}
 #section{
     display: flex;
     flex-direction: column;
@@ -41,7 +43,7 @@ h1{
 
 .card{
     width: 40%;
-    height: 23vh;
+    height: 25vh;
     background-color: #FFFFFF;
     padding: 30px;
     display: flex;
@@ -61,4 +63,39 @@ h1{
     font-size: 20px;
     font-family: 'Roboto';   
     font-weight: 300; 
+}
+#input-card{
+    width: 40%;
+    height: 25vh;
+    background-color: #FFFFFF;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    overflow: auto;
+    display: none;
+}
+
+#input-title{
+    font-size: 30px;
+    font-weight: 900;
+    font-family: 'Roboto';
+}
+
+#input-text{
+    font-size: 20px;
+    font-family: 'Roboto';   
+    font-weight: 300; 
+}
+
+.hide{
+    display: block !important;
+}
+#addbt{
+    display: none;
+}
+footer{
+    display: flex;
+    flex-direction: row;
 }
